@@ -1,4 +1,4 @@
-# Banco_CVE
+# Banco_vetorial_CVE
 
 Automatize a extração e inserção de dados de vulnerabilidades em um banco PostgreSQL, integrando diversas fontes (NVD, CXSecurity, Exploit-DB).
 
@@ -6,7 +6,7 @@ Automatize a extração e inserção de dados de vulnerabilidades em um banco Po
 
 ## Índice
 
-- [Banco\_CVE](#banco_cve)
+- [Banco\_vetorial\_CVE](#banco_vetorial_cve)
   - [Índice](#índice)
   - [Visão Geral](#visão-geral)
   - [Pré-requisitos](#pré-requisitos)
