@@ -1,4 +1,4 @@
-# Extract_CVE
+# Banco_vetorial_CVE
 
 Automatize a extração e inserção de dados de vulnerabilidades em um banco PostgreSQL, integrando diversas fontes:
 
@@ -23,7 +23,7 @@ Ao final, todas as vulnerabilidades ficam disponíveis em views para consultas u
 
 ## Tabela de Conteúdos
 
-- [Extract\_CVE](#extract_cve)
+- [Banco\_vetorial\_CVE](#banco_vetorial_cve)
   - [Tabela de Conteúdos](#tabela-de-conteúdos)
   - [Pré-requisitos](#pré-requisitos)
   - [Configuração do Ambiente](#configuração-do-ambiente)
