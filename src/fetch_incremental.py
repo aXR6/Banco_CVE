@@ -61,8 +61,13 @@ def fetch_incremental(days: int = 1):
     records = []
     with gzip.open(gz, "rb") as f:
         for item in ijson.items(f, "CVE_Items.item"):
-            pub_date = item.get("publishedDate","")
-            if pub_date >= since.isoformat():
+            pub_date_raw = item.get("publishedDate", "")
+            try:
+                pub_dt = datetime.fromisoformat(pub_date_raw.replace("Z", "+00:00")) if pub_date_raw else None
+            except ValueError:
+                pub_dt = None
+
+            if pub_dt and pub_dt >= since:
                 cve_id, pub, desc, products, oss = parse_item(item)
                 text_for_emb = f"{desc} {products or ''} {oss or ''}"
                 emb = get_embedding(text_for_emb)
