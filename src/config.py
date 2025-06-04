@@ -37,3 +37,6 @@ EXPLOITDB_REPO_PATH = os.getenv(
     "EXPLOITDB_REPO_PATH",
     os.path.join(base_dir, "exploitdb")
 )
+
+# 8) Dispositivo para embeddings: cpu, gpu ou auto
+EMBEDDING_DEVICE = os.getenv("EMBEDDING_DEVICE", "auto").lower()

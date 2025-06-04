@@ -172,6 +172,7 @@ O caminho deve ser igual ao definido em `EXPLOITDB_REPO_PATH` no `.env`.
 | EXPLOITDB_CSV_URL       | URL do CSV de exploits                                           |
 | SHELLCODES_CSV_URL      | URL do CSV de shellcodes                                         |
 | CX_RSS_URL              | URL do RSS feed do CXSecurity                                    |
+| EMBEDDING_DEVICE        | "cpu", "gpu" ou "auto" para embeddings |
 
 ---
 
@@ -240,7 +241,7 @@ Permite buscas semânticas e enriquecimento de consultas, combinando recuperaç�
 2. **Adicione coluna de embedding:**
 
     ```sql
-    ALTER TABLE public.cve_full ADD COLUMN embedding vector(1536);
+    ALTER TABLE public.cve_full ADD COLUMN embedding vector(768);
     ```
 
 3. **Crie índice vetorial:**

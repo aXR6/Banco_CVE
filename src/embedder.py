@@ -1,9 +1,19 @@
 # embedder.py
 
 from sentence_transformers import SentenceTransformer
+import torch
+from config import EMBEDDING_DEVICE
+
+# Determina o dispositivo
+if EMBEDDING_DEVICE == "cpu":
+    _device = "cpu"
+elif EMBEDDING_DEVICE == "gpu":
+    _device = "cuda"
+else:
+    _device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Inicializa o modelo apenas uma vez
-_model = SentenceTransformer('all-mpnet-base-v2')
+_model = SentenceTransformer('all-mpnet-base-v2', device=_device)
 
 def get_embedding(text: str) -> list[float]:
     """

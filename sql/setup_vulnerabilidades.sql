@@ -1,5 +1,5 @@
 -- ====================================================================================
--- Arquivo: setup_vulnerabilidades_full_search.sql
+-- Arquivo: setup_vulnerabilidades.sql
 -- Descrição: Criação do banco, usuário, tabelas, triggers, índices e views para:
 --            • CVE (NVD completo e incremental)
 --            • CXSecurity
