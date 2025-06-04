@@ -1,0 +1,10 @@
+psycopg2-binary
+requests
+ijson
+beautifulsoup4
+lxml
+tqdm
+python-dotenv
+python-dateutil
+sentence-transformers
+torch
